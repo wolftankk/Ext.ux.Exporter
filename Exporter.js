@@ -38,7 +38,7 @@ Ext.define("Ext.ux.exporter.Exporter", {
           formatter = this.getFormatterByName(formatter);
 
           var columns = Ext.Array.filter(grid.columns, function(col) {
-              return !col.hidden; // && (!col.xtype || col.xtype != "actioncolumn");
+              return !col.hidden && (!col.xtype || col.xtype != "actioncolumn");
           });
 
           Ext.applyIf(config, {
